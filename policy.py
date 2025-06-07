@@ -28,7 +28,7 @@ def compute(days, miles, receipts):
     else:
         reimb = cap_total + (receipts - cap_total) * 0.25
 
-    miles_per_day = miles / days
+    miles_per_day = miles / days if days != 0 else 0
     if 180 <= miles_per_day <= 220:
         reimb += 20
 
